@@ -1,0 +1,25 @@
+main {
+  background-image: url("/assets/imgs/topSection_bg.jpg");
+  padding-top: 73px;
+  height: 100vh;
+  .controls {
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    gap: 30px;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    font-size: 33px;
+    button {
+      padding: 17px;
+      border: solid 1px;
+      border-radius: 6px;
+      transition: all 200ms ease-in-out;
+      color: white;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
