@@ -1,0 +1,67 @@
+.overlay {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: rgb(0, 0, 0, 0.83);
+  animation: appear 150ms linear;
+}
+.modal {
+  width: 300px;
+  height: 200px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url("/assets/imgs/bodyBG.png");
+  background-size: contain;
+  z-index: 2;
+  animation: appear 150ms linear;
+}
+.rb,
+.lb,
+.rt,
+.lt {
+  position: absolute;
+}
+.rb {
+  bottom: -5px;
+  right: -5px;
+  transform: rotate(90deg);
+}
+.lb {
+  bottom: -5px;
+  left: -5px;
+  transform: rotate(180deg);
+}
+.rt {
+  top: -5px;
+  right: -5px;
+}
+.lt {
+  top: -5px;
+  left: -5px;
+  transform: rotate(-90deg);
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 29px;
+  z-index: 1;
+}
+.warning {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 75px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

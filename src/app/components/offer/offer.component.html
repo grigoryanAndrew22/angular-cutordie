@@ -27,7 +27,9 @@
       <li>{{ preloadLang()().offer.about[2] }}</li>
     </ul>
     <div class="price">
-      <button>{{ preloadLang()().offer.button }}</button>
+      <button (click)="showNotAvailable($event)">
+        {{ preloadLang()().offer.button }}
+      </button>
       <span class="current_price">{{ preloadCurr()().offerPrices[0] }}</span>
       <span class="previous_price">{{ preloadCurr()().offerPrices[1] }}</span>
     </div>

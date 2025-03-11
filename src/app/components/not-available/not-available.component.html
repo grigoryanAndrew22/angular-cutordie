@@ -1,0 +1,19 @@
+<div
+  class="overlay"
+  (click)="hideNotAvailable()"
+  [class.active]="notAvailableShown()"
+></div>
+<div class="modal" [class.active]="notAvailableShown()">
+  <div class="wrapper">
+    <div>
+      <div class="title">
+        <button class="close" (click)="hideNotAvailable()">X</button>
+      </div>
+      <p class="warning">Sorry, this feature is currently unavailable.</p>
+      <img src="/assets/imgs/course_page_corner.png" alt="" class="rt" />
+      <img src="/assets/imgs/course_page_corner.png" alt="" class="lt" />
+      <img src="/assets/imgs/course_page_corner.png" alt="" class="lb" />
+      <img src="/assets/imgs/course_page_corner.png" alt="" class="rb" />
+    </div>
+  </div>
+</div>

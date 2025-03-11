@@ -31,7 +31,7 @@
         </p>
       </div>
       <div class="buy_now">
-        <button>Buy Now</button>
+        <button (click)="showNotAvailable($event)">Buy Now</button>
         <span class="for">for</span>
         <span class="price">30$</span>
       </div>
@@ -70,7 +70,7 @@
 </div>
 <div class="buy_bottom">
   <div class="buy">
-    <button>buy now</button>
+    <button (click)="showNotAvailable($event)">buy now</button>
     <span class="for_only">for only</span>
     <span>30$</span>
   </div>

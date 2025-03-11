@@ -2,13 +2,17 @@
   <div class="top-section">
     <div class="controls">
       <div>
-        <button>{{ preloadLang().buttons[0] }}</button>
+        <a routerLink="/aboutme">
+          <button>{{ preloadLang().buttons[0] }}</button></a
+        >
       </div>
       <div>
-        <button>{{ preloadLang().buttons[1] }}</button>
+        <a routerLink="/courses"
+          ><button>{{ preloadLang().buttons[1] }}</button></a
+        >
       </div>
       <div>
-        <button>{{ preloadLang().buttons[2] }}</button>
+        <button (click)="openModal()">{{ preloadLang().buttons[2] }}</button>
       </div>
     </div>
   </div>
@@ -30,7 +34,9 @@
     ></app-offer>
   </div>
   <div class="view_all">
-    <button>{{ preloadLang().buttons[4] }}</button>
+    <a routerLink="/courses">
+      <button>{{ preloadLang().buttons[4] }}</button>
+    </a>
   </div>
   <div class="divider_bottom">
     <img src="/assets/imgs/blot_bottom.png" alt="" width="100%" />

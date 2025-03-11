@@ -4,6 +4,8 @@
 
 @if(modalShown()) {
 <app-modal></app-modal>
+} @if(notAvailableShown()) {
+<app-not-available></app-not-available>
 }
 
 <app-footer></app-footer>
