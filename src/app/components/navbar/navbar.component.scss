@@ -2,6 +2,7 @@ $primary_black: #000;
 $primary_white: #fff;
 
 .navbar {
+  z-index: 1;
   height: 73px;
   position: fixed;
   top: 0;
@@ -14,9 +15,9 @@ $primary_white: #fff;
       flex: 33.3%;
     }
 
-    .title a img {
+    .title a {
+      width: 187px;
       display: block;
-
       margin: 0 auto;
     }
 

@@ -1,0 +1,145 @@
+@mixin buttonStyle {
+  font-size: 29px;
+  font-weight: 600;
+  padding: 25px 40px;
+  border: solid 2px;
+  border-radius: 6px;
+  transition: all 200ms ease-in-out;
+  color: black;
+  margin-right: 35px;
+  white-space: nowrap;
+  &:hover {
+    transform: scale(1.15);
+  }
+}
+
+.info_wrapper {
+  padding-top: 136px;
+  width: 90%;
+  margin: 0 auto;
+  color: rgb(55, 55, 55);
+  .picture_info {
+    display: flex;
+    gap: 95px;
+    // flex-wrap: wrap;
+    .picture {
+      position: relative;
+      height: 404px;
+      .lt,
+      .rt,
+      .rb,
+      .lb {
+        position: absolute;
+      }
+      .lt {
+        top: -4px;
+        left: -4px;
+        transform: rotate(-90deg);
+      }
+      .rt {
+        top: -3px;
+        right: -3px;
+      }
+      .rb {
+        bottom: 0px;
+        right: -3px;
+        transform: rotate(90deg);
+      }
+      .lb {
+        bottom: 0px;
+        left: -4px;
+        transform: rotate(180deg);
+      }
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding-top: 30px;
+      .difficulty,
+      .duration,
+      .equipment {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        font-size: 30px;
+        p span {
+          font-weight: 600;
+          padding-left: 7px;
+        }
+      }
+      .difficulty {
+        img {
+          filter: invert(61%) sepia(0%) saturate(1181%) hue-rotate(221deg)
+            brightness(82%) contrast(74%);
+        }
+      }
+      .equipment {
+        .equip {
+          font-size: 20px;
+          font-weight: 600;
+          white-space: collapse;
+        }
+      }
+      .buy_now {
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 50px;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        .for {
+          font-size: 25px;
+        }
+        .price {
+          font-size: 40px;
+          font-weight: 600;
+        }
+        button {
+          @include buttonStyle();
+        }
+      }
+    }
+  }
+  h1 {
+    text-transform: uppercase;
+    font-size: 56px;
+    margin-bottom: 47px;
+  }
+}
+.paragraphs {
+  width: 90%;
+  margin: 150px auto;
+  p {
+    margin: 50px 0px;
+    font-size: 26px;
+    font-weight: 600;
+  }
+}
+.buy_bottom {
+  .buy {
+    padding-bottom: 74px;
+    .for_only {
+      text-transform: uppercase;
+      color: #707070;
+      font-size: 25px;
+    }
+    .for_only + span {
+      font-size: 50px;
+      font-weight: 600;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    button {
+      @include buttonStyle();
+    }
+  }
+  display: flex;
+  flex-direction: column;
+
+  img {
+    margin-bottom: -1px;
+  }
+}

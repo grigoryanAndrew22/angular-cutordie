@@ -1,0 +1,42 @@
+<div class="offer" #wrapper>
+  <div class="cards">
+    <div class="card-1">
+      <div class="preview">
+        <img src="/assets/imgs/offer_card.png" alt="" width="100%" />
+        <p>{{ preloadLang()().offer.cardTitle }}</p>
+      </div>
+    </div>
+    <div class="card-2">
+      <div class="preview">
+        <img src="/assets/imgs/offer_card.png" alt="" width="100%" />
+        <p>{{ preloadLang()().offer.cardTitle }}</p>
+      </div>
+    </div>
+    <div class="card-3">
+      <div class="preview">
+        <img src="/assets/imgs/offer_card.png" alt="" width="100%" />
+        <p>{{ preloadLang()().offer.cardTitle }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="description">
+    <h3>{{ preloadLang()().offer.title }}</h3>
+    <ul>
+      <li>{{ preloadLang()().offer.about[0] }}</li>
+      <li>{{ preloadLang()().offer.about[1] }}</li>
+      <li>{{ preloadLang()().offer.about[2] }}</li>
+    </ul>
+    <div class="price">
+      <button>{{ preloadLang()().offer.button }}</button>
+      <span class="current_price">{{ preloadCurr()().offerPrices[0] }}</span>
+      <span class="previous_price">{{ preloadCurr()().offerPrices[1] }}</span>
+    </div>
+  </div>
+</div>
+
+<img
+  src="/assets/imgs/scissors_divider.png"
+  alt=""
+  width="100%"
+  class="divider"
+/>

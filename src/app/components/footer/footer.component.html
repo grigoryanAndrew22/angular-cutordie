@@ -1,0 +1,60 @@
+<footer>
+  <div class="footer_wrapper">
+    <div class="logo_copyright">
+      <img
+        src="/assets/imgs/footer_logo.png"
+        alt=""
+        width="344px"
+        height="254px"
+      />
+      <span>&copy; 2023 Cut or die. All rights reserved.</span>
+    </div>
+    <div class="menu">
+      <div class="info">
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=cutordieofficial@gmail.com"
+          >Email</a
+        >
+        <a routerLink="/aboutme">{{ preloadLang().controls[0] }}</a>
+        <a href="">FAQ</a>
+      </div>
+      <img src="/assets/imgs/divider.svg" alt="" height="220px" />
+      <div class="policy">
+        <a routerLink="/policy">{{ preloadLang().controls[1] }}</a>
+        <a routerLink="/policy">{{ preloadLang().controls[2] }}</a>
+        <a routerLink="/policy">{{ preloadLang().controls[3] }}</a>
+      </div>
+      <img src="/assets/imgs/divider.svg" alt="" height="220px" />
+      <div class="social">
+        <a href="">
+          <img src="/assets/imgs/instagram_icon.png" alt="" width="76px" />
+        </a>
+        <a href="">
+          <img src="/assets/imgs/tiktok_icon.png" alt="" width="69px" />
+        </a>
+      </div>
+      <img src="/assets/imgs/divider.svg" alt="" height="220px" />
+      <div class="currency_language">
+        <div class="currency">
+          <img src="/assets/imgs/currency_icon.png" alt="" />
+          @for(btn of currButtons; track btn) {
+          <button
+            (click)="setCurr(btn[0])"
+            [class.selected]="currency() === btn[0]"
+          >
+            {{ btn[1] }}
+          </button>
+          }
+        </div>
+        <div class="language">
+          <img src="/assets/imgs/language_icon.png" alt="" />
+          @for (btn of langButtons; track btn) {
+          <button (click)="setLang(btn)" [class.selected]="language() === btn">
+            {{ btn.toUpperCase() }}
+          </button>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

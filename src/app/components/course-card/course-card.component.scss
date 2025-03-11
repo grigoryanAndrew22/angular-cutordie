@@ -1,0 +1,91 @@
+.card {
+  transition: all 100ms ease-in-out;
+  &:hover {
+    transform: scale(1.07);
+    .lt_corner {
+      top: -16px;
+      left: -16px;
+    }
+    .rb_corner {
+      bottom: -16px;
+      right: -16px;
+    }
+  }
+  background: url("/assets/imgs/course_card_bg.png");
+  display: flex;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  position: relative;
+  padding: 20px;
+  width: 400px;
+  .lt_corner,
+  .rb_corner {
+    transition: all 150ms ease-in-out;
+    position: absolute;
+  }
+  .lt_corner {
+    top: -8px;
+    left: -8px;
+    transform: rotate(180deg);
+  }
+  .rb_corner {
+    bottom: -8px;
+    right: -8px;
+  }
+  .preview {
+    position: relative;
+  }
+  .preview > img {
+    object-fit: cover;
+  }
+  .scissors,
+  .title,
+  .price {
+    position: absolute;
+    color: white;
+  }
+  .scissors {
+    top: 15px;
+    left: 12px;
+  }
+  .title {
+    bottom: 17px;
+    left: 15px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .price {
+    top: 15px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    .difficulty_time {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    .time,
+    .difficulty {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .difficulty {
+      img {
+        filter: invert(61%) sepia(0%) saturate(1181%) hue-rotate(221deg)
+          brightness(82%) contrast(74%);
+      }
+    }
+    .info {
+      padding: 20px 0px 30px 0px;
+      font-size: 15px;
+      line-height: 1.22em;
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+}

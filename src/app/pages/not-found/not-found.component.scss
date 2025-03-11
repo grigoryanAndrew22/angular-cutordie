@@ -1,0 +1,37 @@
+.notfound {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .top_part {
+    padding-top: 175px;
+    text-align: center;
+    ._404,
+    .inscription {
+      color: rgb(141, 0, 0);
+    }
+    ._404 {
+      font-size: 165px;
+    }
+    .inscription {
+      font-size: 56px;
+      text-transform: uppercase;
+    }
+  }
+  .btn {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  button {
+    font-size: 50px;
+    padding: 30px 115px;
+    border: solid 2.5px;
+    border-radius: 6px;
+    transition: all 200ms ease-in-out;
+    color: black;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

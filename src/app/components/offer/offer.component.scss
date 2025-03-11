@@ -1,0 +1,94 @@
+@for $i from 1 through 3 {
+  .card-#{$i} {
+    background: url("/assets/imgs/card_bg.png");
+    width: 340px;
+    height: 350px;
+    box-shadow: rgb(40, 40, 43) 0.5px 0.5px 25px,
+      rgb(40, 40, 43) -0.5px -0.5px 25px;
+    .preview {
+      width: 90%;
+      margin: 0 auto;
+    }
+    img {
+      display: block;
+      padding-top: 15px;
+      margin: 0 auto;
+    }
+    p {
+      font-size: 25px;
+      padding-top: 15px;
+    }
+  }
+}
+
+.description {
+  flex-basis: 37%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  .price {
+    position: relative;
+    .current_price {
+      font-size: 47px;
+    }
+    button {
+      font-size: 29px;
+      font-weight: 600;
+      padding: 30px 40px;
+      border: solid 2px;
+      border-radius: 6px;
+      transition: all 200ms ease-in-out;
+      color: black;
+      margin-right: 35px;
+      &:hover {
+        transform: scale(1.15);
+      }
+    }
+    .previous_price {
+      text-decoration: line-through;
+      font-size: 29px;
+      position: absolute;
+      color: #979797;
+    }
+  }
+  h3 {
+    font-size: 32px;
+    text-transform: uppercase;
+  }
+  ul {
+    li {
+      padding: 10px 0px 10px 5px;
+    }
+    list-style-type: "-";
+    font-size: 25px;
+  }
+}
+
+.card-1 {
+  position: absolute;
+  transform: rotate(-21deg) translate(-150px, -25px);
+  z-index: -1;
+}
+
+.card-3 {
+  position: absolute;
+  transform: rotate(21deg) translate(150px, -25px);
+}
+
+.offer {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.cards {
+  flex-basis: 47%;
+  justify-content: center;
+  display: flex;
+  position: relative;
+}
+
+.divider {
+  margin-top: 100px;
+}

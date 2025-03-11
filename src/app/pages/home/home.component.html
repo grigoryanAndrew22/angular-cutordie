@@ -1,13 +1,38 @@
 <main>
-  <div class="controls">
-    <div>
-      <button>about me</button>
+  <div class="top-section">
+    <div class="controls">
+      <div>
+        <button>{{ preloadLang().buttons[0] }}</button>
+      </div>
+      <div>
+        <button>{{ preloadLang().buttons[1] }}</button>
+      </div>
+      <div>
+        <button>{{ preloadLang().buttons[2] }}</button>
+      </div>
     </div>
-    <div>
-      <button>courses</button>
-    </div>
-    <div>
-      <button>sign in</button>
-    </div>
+  </div>
+  <div class="offers">
+    <img src="/assets/imgs/blot_top.png" alt="" width="100%" />
+    <img src="/assets/imgs/wooden_plate.png" alt="" width="100%" />
+    <app-offer
+      [preloadLang]="preloadLang"
+      [preloadCurr]="preloadCurr"
+    ></app-offer>
+    <app-offer
+      [preloadLang]="preloadLang"
+      [preloadCurr]="preloadCurr"
+      appReverseOffer
+    ></app-offer>
+    <app-offer
+      [preloadLang]="preloadLang"
+      [preloadCurr]="preloadCurr"
+    ></app-offer>
+  </div>
+  <div class="view_all">
+    <button>{{ preloadLang().buttons[4] }}</button>
+  </div>
+  <div class="divider_bottom">
+    <img src="/assets/imgs/blot_bottom.png" alt="" width="100%" />
   </div>
 </main>

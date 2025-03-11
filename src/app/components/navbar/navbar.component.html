@@ -1,12 +1,12 @@
 <nav class="navbar">
   <div class="wrapper">
     <div class="logo">
-      <a href="">
-        <img src="/assets/imgs/skull_logo.svg" alt="" height="60px" />
+      <a routerLink="/">
+        <img src="/assets/imgs/skull_logo.svg" alt="" height="56px" />
       </a>
     </div>
     <div class="title">
-      <a href="">
+      <a routerLink="/">
         <img
           src="/assets/imgs/navbar_title.svg"
           alt=""
@@ -16,9 +16,9 @@
       </a>
     </div>
     <div class="menu">
-      <a href="">about me</a>
-      <a href="">courses</a>
-      <button>sign in</button>
+      <a routerLink="/aboutme">{{ preloadLang().controls[0] }}</a>
+      <a routerLink="/courses">{{ preloadLang().controls[1] }}</a>
+      <button (click)="openModal()">{{ preloadLang().controls[2] }}</button>
     </div>
   </div>
 </nav>

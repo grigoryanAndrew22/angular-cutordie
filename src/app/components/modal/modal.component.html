@@ -1,0 +1,124 @@
+<div class="overlay" (click)="closeModal()"></div>
+<div class="modal">
+  <div class="wrapper">
+    <div>
+      <div class="title">
+        <h1>{{ signUpShown() ? "SIGN UP" : "SIGN IN" }}</h1>
+        <button class="close" (click)="closeModal()">X</button>
+      </div>
+      <!-- SIGN UP FORM -->
+      @if(signUpShown()) {
+      <form [formGroup]="signUpForm" (ngSubmit)="onSignUp()">
+        <div class="control_email">
+          <label for="modal_name">Name</label>
+          <input
+            type="text"
+            id="modal_name"
+            placeholder="Name"
+            formControlName="name"
+          />
+        </div>
+
+        <div class="control_email">
+          <label for="modal_email">Email</label>
+          <input
+            type="email"
+            id="modal_email"
+            placeholder="Email"
+            [formControl]="signUpForm.controls.email"
+          />
+        </div>
+        <div class="control_password noMargin">
+          <label for="modal_password">Password</label>
+
+          <input
+            type="password"
+            id="modal_password"
+            placeholder="Password"
+            [formControl]="signUpForm.controls.passwords.controls.password"
+          />
+          <!-- @if(invalidMessage) {
+          <p class="control-error">{{ invalidMessage }}</p>
+          } -->
+        </div>
+
+        <div class="control_password">
+          <label for="modal_confirm">Confirm password</label>
+          <input
+            type="password"
+            id="modal_confirm"
+            placeholder="Confirm password"
+            [formControl]="
+              signUpForm.controls.passwords.controls.confirmPassword
+            "
+          />
+        </div>
+
+        <div class="submit">
+          <button>Sign up</button>
+          <span>Have an account?</span>
+          <button
+            class="switch_to_signup"
+            (click)="switchModal(); $event.preventDefault()"
+          >
+            Sign in
+          </button>
+        </div>
+      </form>
+      }
+
+      <!-- SIGN IN FORM -->
+      @if(!signUpShown()) {
+      <form [formGroup]="signInForm" (ngSubmit)="onSignIn()">
+        <div class="control_email">
+          <label for="modal_email">Email</label>
+          <input
+            type="email"
+            id="modal_email"
+            placeholder="Email"
+            [formControl]="signInForm.controls.email"
+          />
+        </div>
+        <div class="control_password" [class.noMargin]="signUpShown()">
+          <label for="modal_password">Password</label>
+
+          <button type="button">Forgot password?</button>
+
+          <input
+            type="password"
+            id="modal_password"
+            placeholder="Password"
+            [formControl]="signInForm.controls.password"
+          />
+          <!-- @if(invalidMessage) {
+          <p class="control-error">{{ invalidMessage }}</p>
+          } -->
+        </div>
+        <div class="submit">
+          <button>Sign in</button>
+          <span>Don't have an account?</span>
+          <button
+            class="switch_to_signup"
+            (click)="switchModal(); $event.preventDefault()"
+          >
+            Sign up
+          </button>
+        </div>
+      </form>
+      }
+      <div class="or">
+        <img src="/assets/imgs/modal_divider.svg" alt="" />
+        <span>or</span>
+        <img src="/assets/imgs/modal_divider.svg" alt="" />
+      </div>
+      <div class="google_link">
+        <a class="google" href="https://www.google.com/">Log in with google</a>
+      </div>
+
+      <img src="/assets/imgs/course_page_corner.png" alt="" class="rt" />
+      <img src="/assets/imgs/course_page_corner.png" alt="" class="lt" />
+      <img src="/assets/imgs/course_page_corner.png" alt="" class="lb" />
+      <img src="/assets/imgs/course_page_corner.png" alt="" class="rb" />
+    </div>
+  </div>
+</div>
